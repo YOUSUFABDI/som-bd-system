@@ -7,8 +7,6 @@ let imageWrapper = document.querySelector(".image__wrapper");
 let wrapperDots = document.querySelector(".dot__wrapper");
 let imageNum = 0;
 
-console.log('hello')
-
 const data = [
   {
     imgSrc: "https://picsum.photos/650/500/?random=1",
