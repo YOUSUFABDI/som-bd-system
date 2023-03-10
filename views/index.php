@@ -8,8 +8,8 @@
     <!-- <link rel="stylesheet" href="Style.css"> -->
   </head>
   <body>
-                          <h1>somali blood donation system
-                
-                       </h1>
+      <h1>somali blood donation system
+
+              </h1>
   </body>
 </html>
