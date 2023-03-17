@@ -10,11 +10,19 @@
       href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <!-- Font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Css Link -->
     <link rel="stylesheet" href="../assests/css/home.css" />
   </head>
   <body>
-    <header class="header__wrapper">
+    <header class="header__wrapper paddingX">
       <div class="overlay has-fade"></div>
       <nav class="flex jc-sb ai-c">
         <a class="logo" href="/">Som Blood Donation</a>
@@ -51,30 +59,156 @@
       </div>
     </header>
 
-    <section class="carousel__wrapper">
-      <div class="image__wrapper">
-        <!-- <a href="#"><img src="https://picsum.photos/650/500/?random=1" /></a>
-        <a href="#"><img src="https://picsum.photos/650/500/?random=2" /></a>
-        <a href="#"><img src="https://picsum.photos/650/500/?random=3" /></a>
-        <a href="#"><img src="https://picsum.photos/650/500/?random=4" /></a>
-        <a href="#"><img src="https://picsum.photos/650/500/?random=5" /></a> -->
+    <section class="carousel__section marginX">
+      <div class="carousel__image__info">
+        <img
+          src="../assests/images/Blood donation-pana.png"
+          alt="donation-pana-img"
+          name="slide"
+        />
+        <div class="carousel__info">
+          <h3 class="cr__title">Recent Blood Donation Happened</h3>
+          <p class="cr__content">
+            People realy need people today some saves aperson live by transution
+            of bloood always find out how often you can donate blood and make an
+            appointment to donate today.
+          </p>
+        </div>
       </div>
 
-      <div class="buttons__wrapper">
-        <div class="left__right__btn">
-          <a class="arrow arrow-l" href="#">&#10094;</a>
-          <a class="arrow arrow-r" href="">&#10095;</a>
-        </div>
+      <div class="carousel__buttons">
+        <span class="left__btn">
+          <i class="fa-solid fa-chevron-left"></i>
+        </span>
+        <span class="right__btn">
+          <i class="fa-solid fa-chevron-right"></i>
+        </span>
+      </div>
 
-        <div class="dot__wrapper">
-          <!-- <a class="img-dot img-dot1" href="#"></a>
-          <a class="img-dot img-dot2" href="#"></a>
-          <a class="img-dot img-dot3" href="#"></a>
-          <a class="img-dot img-dot4" href="#"></a>
-          <a class="img-dot img-dot5" href="#"></a> -->
+      <div class="carousel__dots" id="do__wrap">
+        <button class="img-dot"></button>
+        <button class="img-dot"></button>
+        <button class="img-dot"></button>
+        <button class="img-dot"></button>
+      </div>
+    </section>
+
+    <section class="ways__section paddingX">
+      <span class="ways__title">ways to give blood</span>
+      <div class="ways__image__info">
+        <div class="ways__img__wrapper">
+          <img
+            class="ways__img"
+            src="../assests/images/Blood test-pana.svg"
+            alt="blood-test-img"
+          />
+        </div>
+        <div class="ways__info">
+          <span class="ways__info__title">Donate in Somali</span>
+          <p>
+            Every day, patients in your community need blood transfusions to
+            survive and thrive. they rely on the generosity of donors like you,
+            who help ensure a safe, healthy blood supply. Make an appointment to
+            donate blood today.
+          </p>
+          <button class="ways__btn">Make Appointment</button>
         </div>
       </div>
     </section>
+
+    <section class="donation__highlight__section marginX">
+      <span class="hightlight__title">Donation Highlights</span>
+      <div class="donation__highlight__cards">
+        <div class="donation__highlight__card">
+          <div class="hightlight__img">
+            <img
+              src="../assests/images/Blood donation-bro.svg"
+              alt="blood-donation-img"
+            />
+          </div>
+          <div class="highlight__info">
+            <span>Want to donate for the first time?</span>
+            <p>
+              We always need new donors. Let us take you through the steps to
+              becoming a donor and the process of getting that first appointment
+              booked.
+            </p>
+            <button>Donate Today</button>
+          </div>
+        </div>
+
+        <div class="donation__highlight__card">
+          <div class="hightlight__img">
+            <img
+              src="../assests/images/Blood donation-amico.svg"
+              alt="blood-donation-img"
+            />
+          </div>
+          <div class="highlight__info">
+            <span>We need blood donors</span>
+            <p>
+              There are patients need blood if you give away even one unit of
+              blood means you are saving live and you are live saver so to
+              donate now set up an appointment now.
+            </p>
+            <button>Donate Today</button>
+          </div>
+        </div>
+
+        <div class="donation__highlight__card">
+          <div class="hightlight__img">
+            <img
+              src="../assests/images/Blood donation-rafiki.svg"
+              alt="blood-donation-img"
+            />
+          </div>
+          <div class="highlight__info">
+            <span>Save a life today give blood.</span>
+            <p>
+              Every two seconds Someone needs blood so make your appointment now
+              to donate to save life.
+            </p>
+            <button>Donate Today</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer__section marginX">
+      <div class="footer__head">
+        <div class="footer__image">
+          <img
+            src="../assests/images/Health professional team-pana.svg"
+            alt=""
+          />
+        </div>
+
+        <div class="footer__links">
+          <span>Services</span>
+          <div>
+            <span>Home</span>
+            <span>About us</span>
+            <span>How to donate</span>
+            <span>Donate</span>
+          </div>
+        </div>
+
+        <div class="footer__info">
+          <span>Som Blood Donation</span>
+          <p>
+            Somali Blood donation management system is a system that makes it
+            easy for people to donate blood online in a timely manner for both
+            donors and recipients. It's also a web-based system that can help
+            with blood bag information during handling in the blood bank.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer__foot">
+        <div class="footer__line"></div>
+        <span>© 2023 Som Blood Donation. All rights reserved</span>
+      </div>
+    </footer>
 
     <!-- js link -->
     <script src="../js/main.js"></script>

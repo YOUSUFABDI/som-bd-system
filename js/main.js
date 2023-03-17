@@ -3,34 +3,44 @@ const header = document.querySelector(".header__wrapper");
 const body = document.querySelector("body");
 const fadeElements = document.querySelectorAll(".has-fade");
 
-let imageWrapper = document.querySelector(".image__wrapper");
-let wrapperDots = document.querySelector(".dot__wrapper");
-let imageNum = 0;
-
-const data = [
-  {
-    imgSrc: "https://picsum.photos/650/500/?random=1",
-    alink: "https://www.youtube.com/",
-  },
-  {
-    imgSrc: "https://picsum.photos/650/500/?random=2",
-    alink: "https://www.google.com.tw/",
-  },
-  {
-    imgSrc: "https://picsum.photos/650/500/?random=3",
-    alink: "https://www.facebook.com/",
-  },
-  {
-    imgSrc: "https://picsum.photos/650/500/?random=4",
-    alink: "https://www.instagram.com/",
-  },
-  {
-    imgSrc: "https://picsum.photos/650/500/?random=5",
-    alink: "https://zh.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5",
-  },
+// Carousel
+const images = [
+  "../assests/images/Blood donation-pana.png",
+  "../assests/images/Blood donation-cuate.png",
+  "../assests/images/Doctors-pana.png",
+  "../assests/images/Team spirit-pana.png",
 ];
 
-btnHumberger.addEventListener("click", function () {
+const titles = [
+  "Recent Blood Donation Happened",
+  "Donate in Somali",
+  "Want to donate for the first time?",
+  "We need blood donors",
+];
+
+const contents = [
+  "People realy need people today to saves aperson live by transution of bloood so make an appointment to donate today.",
+  "Every day, patients in your community need blood transfusions to survive and thrive. Make an appointment to donate blood today.",
+  "We always need new donors. Let us take you through the steps to becoming a donor.",
+  "There are patients need blood if you give away even one unit of blood means you are saving live and you are live saver.",
+];
+
+const dotButtons = document.querySelectorAll(".img-dot");
+const dotWrapper = document.getElementById("do__wrap");
+
+let leftButton = document.querySelector(".left__btn");
+let rightButton = document.querySelector(".right__btn");
+let prevBtn = null;
+let i = 0;
+
+document.slide.src = images[0];
+document.querySelector(".cr__title").innerText = titles[0];
+document.querySelector(".cr__content").innerText = contents[0];
+
+changeImgDot();
+
+// opening and closing nav menu mobile
+function openNavMenu() {
   console.log("clicked");
   if (header.classList.contains("open")) {
     body.classList.remove("noscroll");
@@ -47,53 +57,100 @@ btnHumberger.addEventListener("click", function () {
       element.classList.remove("fade-out");
     });
   }
-});
+}
 
-let changeImg = function () {
-  let imgs = [...document.querySelectorAll(".image__wrapper a")];
-  let btns = [...document.querySelectorAll(".dot__wrapper a")];
+function setImages() {
+  document.slide.src = images[i];
+  document.querySelector(".cr__title").innerText = titles[i];
+  document.querySelector(".cr__content").innerText = contents[i];
+}
 
-  imgs.forEach((item, index) => {
-    item.style.display = index === imageNum ? "" : "none";
-  });
-
-  btns.forEach((item, index) => {
-    index === imageNum
-      ? item.classList.add("active")
-      : item.classList.remove("active");
-  });
-};
-
-let changeIndex = function (e) {
-  e.preventDefault();
-
-  if (this.classList.contains("arrow-l")) {
-    imageNum = imageNum <= 0 ? data.length - 1 : imageNum - 1;
-  } else if (this.classList.contains("arrow-r")) {
-    imageNum = (imageNum) => (data.length - 1 ? (imageNum = 0) : imageNum + 1);
+//handle next button
+function nextButton() {
+  //changes images & titles & content
+  if (i < images.length - 1) {
+    i++;
+    document.slide.src = images[i];
+    document.querySelector(".cr__title").innerText = titles[i];
+    document.querySelector(".cr__content").innerText = contents[i];
   } else {
-    imageNum = this.dataset.num * 1;
+    i = 0;
+    document.slide.src = images[0];
+    document.querySelector(".cr__title").innerText = titles[0];
+    document.querySelector(".cr__content").innerText = contents[0];
   }
-  changeImg();
-};
 
-data.forEach((item, index) => {
-  let link = document.createElement("a");
-  link.target = "_blank";
-  link.href = item.alink;
-  let img = document.createElement("img");
-  img.src = item.imgSrc;
-  link.appendChild(img);
-  imageWrapper.appendChild(link);
+  changeImgDot();
+  setImages();
+}
 
-  let dot = document.createElement("a");
-  dot.classList.add("img-dot");
-  dot.dataset.num = `${index}`;
-  wrapperDots.appendChild(dot);
+//handles previous button
+function prevButton() {
+  //changes images
+  if (i > 0) {
+    i--;
+  } else {
+    i = images.length - 1;
+  }
+
+  //changes title
+  if (titles.length > 0) {
+    document.querySelector(".cr__title").innerText = titles[i];
+  } else {
+    i = titles.length - 1;
+  }
+
+  //changes content
+  if (contents.length > 0) {
+    document.querySelector(".cr__content").innerText = contents[i];
+  } else {
+    i = contents.length - 1;
+  }
+
+  changeImgDot();
+  setImages();
+}
+
+//change image when click dot button
+function changeImage(index) {
+  document.querySelector(".cr__title").innerText = titles[index];
+  document.querySelector(".cr__content").innerText = contents[index];
+  document.slide.src = images[index];
+}
+
+//handles dot buttons
+function handleDotBtn(e) {
+  const isButton = e.target.nodeName === "BUTTON";
+
+  if (!isButton) {
+    return;
+  }
+
+  e.target.classList.add("active");
+
+  if (prevBtn !== null) {
+    prevBtn.classList.remove("active");
+  }
+
+  prevBtn = e.target;
+}
+
+//change image and dot possition
+function changeImgDot() {
+  dotButtons[i].classList.add("active");
+  if (prevBtn !== null) {
+    prevBtn.classList.remove("active");
+  }
+  prevBtn = dotButtons[i];
+}
+
+//Eventlistener
+btnHumberger.addEventListener("click", openNavMenu);
+rightButton.addEventListener("click", nextButton);
+leftButton.addEventListener("click", prevButton);
+dotWrapper.addEventListener("click", handleDotBtn);
+dotButtons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    changeImage(index);
+  });
 });
-
-[...document.querySelectorAll(".buttons__wrapper a")].forEach((item) => {
-  item.addEventListener("click", changeIndex);
-});
-
-changeIndex();
