@@ -219,12 +219,16 @@ nav {
 /* Vissibilty */
 @media (max-width: 63.9375em) {
   .hide-for-mobile {
-    background-color: rebeccapurple;
     display: none;
   }
 }
 
 @media (min-width: 64em) {
+  .header__wrapper {
+    margin-left: 42px;
+    margin-right: 42px;
+  }
+
   .hide-for-desktop {
     display: none;
   }

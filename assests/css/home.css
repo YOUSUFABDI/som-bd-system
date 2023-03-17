@@ -149,6 +149,11 @@
 
 /* DESKTOP CAROUSEL*/
 @media (min-width: 62.5em) {
+  .carousel__section {
+    /* margin-left: 42px;
+    margin-right: 42px; */
+  }
+
   .carousel__image__info img {
     flex: 1;
   }
@@ -268,6 +273,11 @@
 
 /* DESKTOP WAYS SECTION */
 @media (min-width: 62.5em) {
+  /* .ways__section {
+    margin-left: 42px;
+    margin-right: 42px;
+  } */
+
   .ways__title {
     font-size: var(--fs20);
   }

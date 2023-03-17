@@ -97,7 +97,6 @@
 /* TABLET FOOTER SECTION*/
 @media (min-width: 37.5em) {
   .footer__section {
-    margin: 0 42px;
     margin-block-end: 20px;
     padding-bottom: 33px;
   }
@@ -110,6 +109,12 @@
 
 /* DESKTOP FOOTER SECTION */
 @media (min-width: 62.5em) {
+  .footer__section {
+    background-color: rebeccapurple;
+    margin-left: 42px;
+    margin-right: 42px;
+  }
+
   .footer__head {
     flex-direction: row;
   }
