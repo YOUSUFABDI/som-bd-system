@@ -1,8 +1,3 @@
-const btnHumberger = document.querySelector("#btnHumberger");
-const header = document.querySelector(".header__wrapper");
-const body = document.querySelector("body");
-const fadeElements = document.querySelectorAll(".has-fade");
-
 // Carousel
 const images = [
   "../assests/images/Blood donation-pana.png",
@@ -38,26 +33,6 @@ document.querySelector(".cr__title").innerText = titles[0];
 document.querySelector(".cr__content").innerText = contents[0];
 
 changeImgDot();
-
-// opening and closing nav menu mobile
-function openNavMenu() {
-  console.log("clicked");
-  if (header.classList.contains("open")) {
-    body.classList.remove("noscroll");
-    header.classList.remove("open");
-    fadeElements.forEach(function (element) {
-      element.classList.remove("fade-in");
-      element.classList.add("fade-out");
-    });
-  } else {
-    body.classList.add("noscroll");
-    header.classList.add("open");
-    fadeElements.forEach(function (element) {
-      element.classList.add("fade-in");
-      element.classList.remove("fade-out");
-    });
-  }
-}
 
 function setImages() {
   document.slide.src = images[i];
@@ -145,7 +120,7 @@ function changeImgDot() {
 }
 
 //Eventlistener
-btnHumberger.addEventListener("click", openNavMenu);
+// btnHumberger.addEventListener("click", openNavMenu);
 rightButton.addEventListener("click", nextButton);
 leftButton.addEventListener("click", prevButton);
 dotWrapper.addEventListener("click", handleDotBtn);
