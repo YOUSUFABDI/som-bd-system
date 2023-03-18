@@ -1,3 +1,4 @@
+/* globals */
 /* Colors & Font Sizes*/
 :root {
   --light-red-color: hsl(325, 76%, 50%);
@@ -87,3 +88,5 @@ p {
 .marginX {
   margin: 0 24px;
 }
+
+/* globals */
