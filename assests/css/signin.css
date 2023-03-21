@@ -1,0 +1,138 @@
+.signin__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-color: var(--light--graey);
+  padding-bottom: 30px;
+  margin-block-end: 40px;
+}
+
+.signin__section h2 {
+  color: var(--black-color);
+  font-size: var(--fs-16);
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin-top: 30px;
+}
+
+.signin__section {
+  color: var(--black-color);
+  font-size: var(--fs-14);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.signin__form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.signin__form__item {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.signin__form__item span {
+  color: var(--black-color);
+  font-size: var(--fs-14);
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.signin__form__item input {
+  color: var(--black-color);
+  font-size: var(--fs-16);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  height: 63px;
+  outline: none;
+  border: 1px solid var(--gray-color);
+  border-radius: 20px;
+  padding-left: var(--input-PL);
+}
+
+.signin__form__item input:focus {
+  border: 1px solid var(--blue-color);
+}
+
+.signin__btn {
+  background-color: var(--light-red-color);
+  color: var(--white-color);
+  border: none;
+  padding: 20px 0;
+  font-size: var(--fs-16);
+  font-weight: bold;
+  letter-spacing: 4px;
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.signin__btn:hover {
+  opacity: 0.75;
+}
+
+.signin__foot {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+}
+
+.signin__foot a:nth-child(1) {
+  color: var(--black-color);
+  font-size: var(--fs-16);
+  font-weight: bold;
+  letter-spacing: 3px;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.signin__foot a:nth-child(2) {
+  color: var(--light-red-color);
+  font-size: var(--fs-16);
+  font-weight: bold;
+  letter-spacing: 3px;
+  width: fit-content;
+  align-self: center;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.signin__foot a:nth-child(1):hover,
+.signin__foot a:nth-child(2):hover {
+  opacity: 0.5;
+}
+
+/* TABLET SIGNIN */
+@media (min-width: 37.5em) {
+  .signin__section {
+    margin-block-start: 60px;
+    margin-inline: 100px;
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+}
+
+/* DESKTOP SIGNIN */
+@media (min-width: 62.5em) {
+  .signin__section {
+    margin-block-start: 40px;
+    margin-inline: 180px;
+    padding-top: 30px;
+    padding-bottom: 90px;
+  }
+
+  .signin__form__item {
+    margin-inline: 190px;
+  }
+
+  .signin__btn {
+    margin-inline: 190px;
+  }
+}
