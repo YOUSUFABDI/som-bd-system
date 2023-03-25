@@ -82,17 +82,20 @@
         <div class="registration__grid">
           <div class="registeration__item">
             <span>First Name</span>
-            <input type="text" />
+            <input type="text" class="firstname" />
+            <p class="errf" style="color: red"></p>
           </div>
 
           <div class="registeration__item">
             <span>Second Name</span>
-            <input type="text" />
+            <input type="text" class="secondname" />
+            <p class="errs" style="color: red"></p>
           </div>
 
           <div class="registeration__item">
             <span>Last Name</span>
-            <input type="text" />
+            <input type="text" class="lastname" />
+            <p class="errl" style="color: red"></p>
           </div>
 
           <div class="registeration__item">
@@ -115,7 +118,8 @@
 
           <div class="registeration__item">
             <span>Phone Number</span>
-            <input type="text" />
+            <input type="text" class="phonenumber" />
+            <p class="errp" style="color: red"></p>
           </div>
 
           <div class="registeration__item">
@@ -128,22 +132,26 @@
 
           <div class="registeration__item">
             <span>Email</span>
-            <input type="text" />
+            <input type="text" class="email" />
+            <p class="erre" style="color: red"></p>
           </div>
 
           <div class="registeration__item">
             <span>Username</span>
-            <input type="text" />
+            <input type="text" class="username" />
+            <p class="erru" style="color: red"></p>
           </div>
 
           <div class="registeration__item">
             <span>Password</span>
-            <input type="text" />
+            <input type="text" class="password" />
+            <p class="errpass" style="color: red"></p>
           </div>
 
           <div class="registeration__item">
             <span>Confirm Password</span>
-            <input type="text" />
+            <input type="text" class="confirmpass" />
+            <p class="errcp" style="color: red"></p>
           </div>
         </div>
 
@@ -194,5 +202,13 @@
 
     <!-- js link -->
     <script src="../js/Header.js"></script>
+    <script src="../js/Validation.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+      integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </body>
 </html>
