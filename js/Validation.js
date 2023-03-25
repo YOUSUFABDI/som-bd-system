@@ -1,3 +1,4 @@
+//registration element
 const form = document.querySelector(".registeration__form");
 const firstNameInput = document.querySelector(".firstname");
 const secondNameInput = document.querySelector(".secondname");
@@ -16,7 +17,7 @@ const errU = document.querySelector(".erru");
 const errPass = document.querySelector(".errpass");
 const errCp = document.querySelector(".errcp");
 
-form.addEventListener("submit", (event) => {
+function handleRegForm(event) {
   event.preventDefault();
 
   const errorMessages = [];
@@ -26,9 +27,9 @@ form.addEventListener("submit", (event) => {
   if (errorMessages.length > 0) {
     showErrors();
   } else {
-    swal("thanks for registration", "You donar donar now!", "success");
+    showSuccessMessage();
   }
-});
+}
 
 function validationForm(errorMessages) {
   const validName = new RegExp(
@@ -102,3 +103,9 @@ function validationForm(errorMessages) {
 function showErrors() {
   swal("Fill out the form first!", "You have to enter your info!", "error");
 }
+
+function showSuccessMessage() {
+  swal("thanks for registration", "You donar donar now!", "success");
+}
+
+form.addEventListener("submit", handleRegForm);

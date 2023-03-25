@@ -58,12 +58,14 @@
       <form class="signin__form">
         <div class="signin__form__item">
           <span>Username</span>
-          <input type="text" />
+          <input type="text" class="signin-username" />
+          <p class="err-username" style="color: red"></p>
         </div>
 
         <div class="signin__form__item">
           <span>Password</span>
-          <input type="text" />
+          <input type="text" class="signin-password" />
+          <p class="err-password" style="color: red"></p>
         </div>
 
         <button class="signin__btn">Sign In</button>
@@ -113,5 +115,14 @@
 
     <!-- js link -->
     <script src="../js/Header.js"></script>
+    <script src="../js/ValidateSign.js"></script>
+
+    <!-- sweet alert cdn -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+      integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </body>
 </html>
