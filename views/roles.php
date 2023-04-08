@@ -1,56 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>How to donate</title>
-    <!-- css links -->
-    <link rel="stylesheet" href="../assests/css/globals.css" />
-    <link rel="stylesheet" href="../assests/css/header.css" />
-    <link rel="stylesheet" href="../assests/css/roles.css" />
-    <link rel="stylesheet" href="../assests/css/footer.css" />
-    <!-- css links -->
-  </head>
-  <body>
-    <header class="header__wrapper paddingX">
-      <div class="overlay has-fade"></div>
-      <nav class="flex jc-sb ai-c">
-        <a class="logo" href="/views/home.html">Som Blood Donation</a>
+<?php
+include 'header.php';
+?>
 
-        <a href="#" id="btnHumberger" class="header__toggle hide-for-desktop">
-          <span></span>
-          <span></span>
-          <span></span>
-        </a>
-
-        <div class="header__links hide-for-mobile">
-          <a href="/views/home.html">Home</a>
-          <a href="/views/roles.html">How to donate</a>
-          <a href="#">About us</a>
-          <a href="#">Donate</a>
-        </div>
-
-        <div class="log__reg hide-for-mobile">
-          <a href="./signin.html">Sign In</a>
-          <a href="./registration.html">Sign Up</a>
-        </div>
-      </nav>
-
-      <div class="header__menu flex fd-c has-fade">
-        <a href="/views/home.html">Home</a>
-        <a href="/views/roles.html">How to donate</a>
-        <a href="#">About us</a>
-        <a href="#">Donate</a>
-
-        <div class="menu__reg__lg flex fd-c">
-          <a href="./signin.html">Sign In</a>
-          <a href="./registration.html">Sign Up</a>
-        </div>
-      </div>
-    </header>
-
-    <section class="roles__section">
+    <section class="roles__section marginX">
       <h2>How to donate and Eligibility Criteria</h2>
       <div class="roles__wrapper">
         <div class="role__wrap">
@@ -106,7 +58,7 @@
       </div>
     </section>
 
-    <section class="blood__type__section">
+    <section class="blood__type__section marginX">
       <h2>Facts About Different Blood Types</h2>
       <div class="blood__type__wrapper">
         <div class="blood__type__card">
@@ -182,43 +134,6 @@
       </div>
     </section>
 
-    <footer class="footer__section marginX">
-      <div class="footer__head">
-        <div class="footer__image">
-          <img
-            src="../assests/images/Health professional team-pana.svg"
-            alt=""
-          />
-        </div>
-
-        <div class="footer__links">
-          <span>Services</span>
-          <div>
-            <a href="./home.html">Home</a>
-            <a href="#">About us</a>
-            <a>How to donate</a>
-            <a>Donate</a>
-          </div>
-        </div>
-
-        <div class="footer__info">
-          <span>Som Blood Donation</span>
-          <p>
-            Somali Blood donation management system is a system that makes it
-            easy for people to donate blood online in a timely manner for both
-            donors and recipients. It's also a web-based system that can help
-            with blood bag information during handling in the blood bank.
-          </p>
-        </div>
-      </div>
-
-      <div class="footer__foot">
-        <div class="footer__line"></div>
-        <span>© 2023 Som Blood Donation. All rights reserved</span>
-      </div>
-    </footer>
-
-    <!-- js -->
-    <script src="../js/Header.js"></script>
-  </body>
-</html>
+<?php
+include 'footer.php';
+?>

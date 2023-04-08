@@ -1,11 +1,9 @@
 <?php
 
-$conn = new mysqli("localhost", "root", "", "somali-blood-donation-system");
+$conn = new mysqli("localhost", "root", "", "som-blood-donation");
 
 if($conn->connect_error){
     echo $conn->error;
-}else     {
-    echo "connect succesfully";
 }
 
 

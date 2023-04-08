@@ -29,7 +29,7 @@
 }
 
 .marginX {
-  margin: 0 24px;
+  margin-inline: 42px;
 }
 
 /* Header Starts Here */
@@ -170,6 +170,10 @@ nav {
 @media (min-width: 64em) {
   .hide-for-desktop {
     display: none;
+  }
+
+  .marginX {
+    margin-inline: 42px;
   }
 }
 

@@ -84,7 +84,7 @@
   text-align: center;
 }
 
-.signin__foot a:nth-child(1) {
+.signin__foot p:nth-child(1) {
   color: var(--black-color);
   font-size: var(--fs-16);
   font-weight: bold;
@@ -104,7 +104,6 @@
   transition: opacity 300ms ease-in-out;
 }
 
-.signin__foot a:nth-child(1):hover,
 .signin__foot a:nth-child(2):hover {
   opacity: 0.5;
 }

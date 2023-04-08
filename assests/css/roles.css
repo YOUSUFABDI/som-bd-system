@@ -6,8 +6,8 @@
   padding-top: 25px;
   padding-left: 10px;
   padding-right: 10px;
+  padding-bottom: 10px;
   background-color: var(--light-white-color);
-  margin-inline: 24px;
   margin-block-start: 35px;
 }
 
@@ -115,7 +115,6 @@
   flex-direction: column;
   gap: 30px;
   background-color: transparent;
-  margin-inline: 24px;
   margin-block-start: 35px;
   margin-block-end: 30px;
 }

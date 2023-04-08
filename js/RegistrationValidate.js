@@ -1,0 +1,138 @@
+// form function
+function handleRegForm(event) {
+  event.preventDefault();
+
+  const errorMessages = [];
+
+  validationForm(errorMessages);
+
+  if (errorMessages.length > 0) {
+    // swal(errorMessages.toString(), "error");
+  } else {
+    // registering user
+    registerUser();
+  }
+}
+
+// validating inputs function
+function validationForm(errorMessages) {
+  // error paragraph elements
+  const errL = document.querySelector(".errl");
+  const errP = document.querySelector(".errp");
+  const errE = document.querySelector(".erre");
+  const errU = document.querySelector(".erru");
+  const errPass = document.querySelector(".errpass");
+  const errCp = document.querySelector(".errcp");
+
+  //validation input elements
+  const fullNameInput = document.querySelector(".full_name");
+  const phoneNumInput = document.querySelector(".phonenumber");
+  const emailInput = document.querySelector(".email");
+  const userNameInput = document.querySelector(".username");
+  const passwordInput = document.querySelector(".password");
+  const confirmPassword = document.querySelector(".confirmpass");
+
+  const validName = new RegExp(
+    /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/
+  );
+
+  if (!validName.test(fullNameInput.value)) {
+    errorMessages.push("enter your name");
+    errL.innerText = "enter your name";
+  } else {
+    errL.innerText = "";
+  }
+
+  const validPhone = new RegExp(/^[6]\d{8}$/);
+  if (!validPhone.test(phoneNumInput.value)) {
+    errorMessages.push("invalid phone number");
+    errP.innerText = "invalid phone number";
+  } else {
+    errP.innerText = "";
+  }
+
+  const validGmail = new RegExp(/^[\w.+\-]+@gmail\.com$/);
+  if (!validGmail.test(emailInput.value)) {
+    errorMessages.push("invalid gamil");
+    errE.innerText = "invalid gamil";
+  } else {
+    errE.innerText = "";
+  }
+
+  if (!validName.test(userNameInput.value)) {
+    errorMessages.push("invalid username");
+    errU.innerText = "invalid username";
+  } else {
+    errU.innerText = "";
+  }
+
+  const validPassword = new RegExp(/^.{8,30}$/);
+  if (!validPassword.test(passwordInput.value)) {
+    errorMessages.push("enter password first");
+    errPass.innerText = "enter password first";
+  } else {
+    errPass.innerText = "";
+  }
+
+  if (!validPassword.test(confirmPassword.value)) {
+    errorMessages.push("enter confirmPassword first");
+    errCp.innerText = "enter confirmPassword first";
+  } else {
+    errCp.innerText = "";
+  }
+
+  if (confirmPassword.value !== passwordInput.value) {
+    errorMessages.push("Passwords must match");
+  }
+}
+
+// registering student function
+function registerUser() {
+  let fullName = $("#full_name").val();
+  let gender = $("#gender").val();
+  let bloodType = $("#bloodType").val();
+  let phonenumber = $("#phonenumber").val();
+  let address = $("#address").val();
+  let userType = $("#userType").val();
+  let gmail = $("#email").val();
+  let username = $("#username").val();
+  let password = $("#password").val();
+  let confirmpass = $("#confirmpass").val();
+
+  let sendingData = {
+    fullName: fullName,
+    userType: userType,
+    bloodType: bloodType,
+    gmail: gmail,
+    userName: username,
+    password: password,
+    confirmPass: confirmpass,
+    address: address,
+    gender: gender,
+    phone: phonenumber,
+    action: "registerUser",
+  };
+
+  $.ajax({
+    method: "POST",
+    dataType: "JSON",
+    url: "../api/blood-donation.php",
+    data: sendingData,
+    success: function (data) {
+      let status = data.status;
+      let response = data.data;
+
+      if (status) {
+        swal(response, "You donar donar now!", "success");
+      } else {
+        swal(response, "error");
+      }
+    },
+    error: function (data) {
+      console.log(data);
+    },
+  });
+}
+
+// adding submit form on the form
+$(".registeration__form").on("submit", handleRegForm);
