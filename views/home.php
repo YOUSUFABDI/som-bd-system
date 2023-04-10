@@ -37,6 +37,15 @@ include 'header.php';
       </div>
     </section>
 
+    <!-- id -->
+    <?php if(isset($_SESSION['username']) && !empty($_SESSION['username'])){
+    ?>
+    <input type="hidden" name="update_id" id="update_id" value=" <?php echo $_SESSION['id'] ?> ">
+    <?php }else{?>
+      <input type="hidden" name="update_id" id="update_id" value="">
+    <?php }?>
+    <!-- id -->
+
     <section class="ways__section paddingX">
       <span class="ways__title">ways to give blood</span>
       <div class="ways__image__info">
@@ -123,3 +132,4 @@ include 'header.php';
 include 'footer.php';
 ?>
 <script src="../js/Carousel.js"></script>
+<script src="../js/UpdateProfile.js"></script>

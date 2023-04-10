@@ -80,12 +80,12 @@
 @media (min-width: 37.5em) {
   .roles__section h2,
   .role__wrap .role__wrap__foot__title {
-    font-size: var(--fs20);
+    font-size: var(--fs-14);
   }
 
   .role__wrap p,
   .role__wrap__foot div span {
-    font-size: var(--fs-16);
+    font-size: var(--fs-14);
   }
 }
 
@@ -98,12 +98,12 @@
   .roles__section h2,
   .role__wrap .role__wrap__foot__title,
   .role__wrap span {
-    font-size: var(--fs20);
+    font-size: var(--fs-16);
   }
 
   .role__wrap p,
   .role__wrap__foot div span {
-    font-size: var(--fs20);
+    font-size: var(--fs-14);
     letter-spacing: 4px;
   }
 }

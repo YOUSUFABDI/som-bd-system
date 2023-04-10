@@ -110,6 +110,10 @@ h6 {
   margin-bottom: 20px;
 }
 
+.m-t-20 {
+  margin-top: 20px;
+}
+
 .m-t-40 {
   margin-top: 20px;
 }
@@ -146,6 +150,7 @@ h6 {
   width: 80px;
   font-size: 50px;
   border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.25);
   color: var(--light-dark-color);
 }
 
@@ -192,4 +197,23 @@ h6 {
 #full_name,
 #user_type {
   text-transform: capitalize;
+}
+
+.lgout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  background-color: transparent;
+  color: var(--white-color);
+  font-weight: bold;
+  border: 1px solid var(--light--graey);
+  padding: 6px 8px;
+  border-radius: 3px;
+  width: fit-content;
+  transition: opacity 300ms ease-in-out;
+}
+
+.lgout:hover {
+  opacity: 0.75;
 }

@@ -19,7 +19,10 @@ include 'header.php';
                 <h6 class="f-w-600" id="ursname"><?php echo $_SESSION['username'] ?> </h6>
                 <p id="user_type">User Type &nbsp; :- <?php echo $_SESSION['userType'] ?> </p>
                 <p id="user_type">Blood Type &nbsp; :-  <?php echo $_SESSION['bloodType'] ?> </p>
-                <a class="lgout" href="../api/logout.php"> Logout</a>
+              </div>  
+
+              <div class="card-block text-center">
+                <a class="lgout" href="../api/logout.php"><span><i class="fa-solid fa-power-off"></i></span> Logout</a>
               </div>
             </div>
             <!-- Form -->
@@ -52,7 +55,7 @@ include 'header.php';
                 <div class="row">
                   <div class="col-sm-6 m-t-10">
                    <p class="m-b-10 f-w-600">Username</p>
-                    <input type="text" class="text-muted f-w-400 prof_input" id="profile_username_input" name="profile_username_input" value=" <?php echo $_SESSION['username'] ?> ">
+                    <input type="text" class="text-muted f-w-400 prof_input" id="profile_username_input" name="profile_username_input" value=" <?php echo $_SESSION['username'] ?> " >
                   </div>
 
                   <div class="col-sm-6  m-t-10">

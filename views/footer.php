@@ -10,10 +10,10 @@
         <div class="footer__links">
           <span>Services</span>
           <div>
-            <a href="./home.php">Home</a>
-            <a href="#">About us</a>
-            <a  href="./roles.php">How to donate</a>
-            <a>Appointments</a>
+            <a class="btn_load_screen home">Home</a>
+            <a class="btn_load_screen roles">How to donate</a>
+            <a class="btn_load_screen about">About us</a>
+            <a class="btn_load_screen appointment">Appointments</a>
           </div>
         </div>
 
@@ -41,6 +41,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
 
     <script src="../js/Main.js"></script>
+
 
     <!-- sweet alert cdn -->
     <script

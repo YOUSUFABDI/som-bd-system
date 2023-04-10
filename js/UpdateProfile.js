@@ -11,7 +11,8 @@ function UpdateUserProfile(event) {
   let gmail = $("#profile_email_input").val();
   let address = $("#profile_address_input").val();
 
-  loadUserInfo(id);
+  // loadUserInfo(id);
+  window.location.reload();
 
   let sendingData = {
     id: id,
@@ -53,7 +54,8 @@ function UpdateUserProfile(event) {
 }
 
 function loadUserInfo(id) {
-  $("#head__profile_name").html("");
+  // $("#head__profile_name").html("");
+  // $("#profile_username_input").html("");
 
   let sendingData = {
     id: id,

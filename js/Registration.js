@@ -124,7 +124,11 @@ function registerUser() {
 
       // check if user is registered or not
       if (status) {
-        swal(response, "Login Please!", "success");
+        swal(response, "Login Please", {
+          buttons: false,
+          timer: 3000,
+          icon: "success",
+        });
 
         // reseting form inputs
         $("#full_name").val("");
@@ -138,7 +142,11 @@ function registerUser() {
         $("#password").val("");
         $("#confirmpass").val("");
       } else {
-        swal(response, "error");
+        swal(response, {
+          buttons: false,
+          timer: 3000,
+          icon: "error",
+        });
       }
     },
     error: function (data) {

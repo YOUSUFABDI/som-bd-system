@@ -1,6 +1,5 @@
 <?php
 session_start();
-// unset($_SESSION['username'])
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +31,7 @@ session_start();
     <link rel="stylesheet" href="../assests/css/registeration.css" />
     <link rel="stylesheet" href="../assests/css/login.css" />
     <link rel="stylesheet" href="../assests/css/roles.css" />
+    <link rel="stylesheet" href="../assests/css/appiontment.css" />
     <link rel="stylesheet" href="../assests/css/user_profile.css" />
     <link rel="stylesheet" href="../assests/css/footer.css" />
     <!-- Css Link -->
@@ -43,7 +43,7 @@ session_start();
       <nav class="flex jc-sb ai-c">
         <a class="logo btn_load_screen">Som Blood Donation</a> 
 
-        <a href="#" id="btnHumberger" class="header__toggle hide-for-desktop">
+        <a id="btnHumberger" class="header__toggle hide-for-desktop">
           <span></span>
           <span></span>
           <span></span>
@@ -56,11 +56,13 @@ session_start();
           <a class="btn_load_screen appointment">Appointments</a>
         </div>
 
+        
+
         <!-- Showing profile button if user exits and hidding if -->
         <?php if( isset($_SESSION['username']) && !empty($_SESSION['username']) ){
           ?> 
         <div class="log__reg hide-for-mobile">
-        <a class="profile_name__icon" id="head__profile_name" href="./user_profile.php"> <span class="icon"><i class="fa-solid fa-user"></i></span> <?php echo $_SESSION['username'] ?></a>
+        <a class="profile_name__icon btn_load_screen profile" id="head__profile_name"> <span class="icon"><i class="fa-solid fa-user"></i></span> <?php echo $_SESSION['username'] ?></a>
         </div>
 
         <?php }else{ ?>
@@ -82,7 +84,7 @@ session_start();
         <?php if( isset($_SESSION['username']) && !empty($_SESSION['username']) ){
         ?> 
         <div class="log__reg">
-        <a class="profile_name__icon" id="head__profile_name" href="./user_profile.php"> <p class="icon"><i class="fa-solid fa-user"></i></p> <?php echo $_SESSION['username'] ?></a>
+        <a class="profile_name__icon btn_load_screen profile" id="head__profile_name"> <p class="icon"><i class="fa-solid fa-user"></i></p> <?php echo $_SESSION['username'] ?></a>
         </div>
 
         <?php }else{ ?>
@@ -91,13 +93,6 @@ session_start();
           <a class="btn_load_screen registration">Sign Up</a>
         </div>
         <?php } ?>
-
-        
-
-        <!-- <div class="menu__reg__lg flex fd-c">
-          <a class="btn_load_screen login">Sign In</a>
-          <a class="btn_load_screen registration">Sign Up</a>
-        </div> -->
 
 
       </div>

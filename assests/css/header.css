@@ -236,6 +236,7 @@ nav {
 .header__menu a {
   color: var(--dark-blue-color);
   padding: 0.625rem;
+  font-weight: 400;
   transition: color 300ms ease-in-out;
 }
 
@@ -269,17 +270,23 @@ nav {
   display: flex;
   align-items: center;
   gap: 3px;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  color: var(--dark-blue-color);
 }
 
 .icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
+  background-color: var(--white-color);
+  padding: 4px 6px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.25);
   color: var(--light-dark-color);
 }
 
 .icon i {
   margin-bottom: 3px;
+  color: var(--dark-blue-color);
+  transition: color 300ms ease-in-out;
 }
