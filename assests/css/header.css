@@ -264,3 +264,22 @@ nav {
   opacity: 0.75;
 }
 /* HEADER ENDS HERE */
+
+.profile_name__icon {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  text-transform: uppercase;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--light-dark-color);
+}
+
+.icon i {
+  margin-bottom: 3px;
+}

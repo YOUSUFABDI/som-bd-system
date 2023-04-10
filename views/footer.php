@@ -12,8 +12,8 @@
           <div>
             <a href="./home.php">Home</a>
             <a href="#">About us</a>
-            <a>How to donate</a>
-            <a>Donate</a>
+            <a  href="./roles.php">How to donate</a>
+            <a>Appointments</a>
           </div>
         </div>
 
@@ -39,6 +39,8 @@
 
     <!-- jquery cdn -->
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <script src="../js/Main.js"></script>
 
     <!-- sweet alert cdn -->
     <script

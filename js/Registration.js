@@ -6,12 +6,11 @@ function handleRegForm(event) {
 
   validationForm(errorMessages);
 
-  if (errorMessages.length > 0) {
-    // swal(errorMessages.toString(), "error");
-  } else {
-    // registering user
-    registerUser();
-  }
+  // checking if error exists
+  if (errorMessages.length > 0) return;
+
+  // registering user
+  registerUser();
 }
 
 // validating inputs function
@@ -32,6 +31,7 @@ function validationForm(errorMessages) {
   const passwordInput = document.querySelector(".password");
   const confirmPassword = document.querySelector(".confirmpass");
 
+  // regular exprestions that checks inputs values
   const validName = new RegExp(
     /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/
   );
@@ -122,8 +122,21 @@ function registerUser() {
       let status = data.status;
       let response = data.data;
 
+      // check if user is registered or not
       if (status) {
-        swal(response, "You donar donar now!", "success");
+        swal(response, "Login Please!", "success");
+
+        // reseting form inputs
+        $("#full_name").val("");
+        $("#gender").val("");
+        $("#bloodType").val("");
+        $("#phonenumber").val("");
+        $("#address").val("");
+        $("#userType").val("");
+        $("#email").val("");
+        $("#username").val("");
+        $("#password").val("");
+        $("#confirmpass").val("");
       } else {
         swal(response, "error");
       }

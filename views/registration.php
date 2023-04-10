@@ -93,4 +93,4 @@ include 'header.php';
 <?php
 include 'footer.php';
 ?>
-<script src="../js/RegistrationValidate.js"></script>
+<script src="../js/Registration.js"></script>

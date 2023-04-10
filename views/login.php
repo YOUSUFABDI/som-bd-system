@@ -9,13 +9,13 @@ include 'header.php';
       <form class="signin__form">
         <div class="signin__form__item">
           <span>Username</span>
-          <input type="text" class="signin-username" />
+          <input type="text" class="signin-username" id="username"/>
           <p class="err-username" style="color: red"></p>
         </div>
 
         <div class="signin__form__item">
           <span>Password</span>
-          <input type="text" class="signin-password" />
+          <input type="text" class="signin-password" id="password"/>
           <p class="err-password" style="color: red"></p>
         </div>
 
@@ -31,4 +31,4 @@ include 'header.php';
 <?php
 include 'footer.php';
 ?>  
-<script src="../js/LoginValidate.js"></script>
+<script src="../js/Login.js"></script>

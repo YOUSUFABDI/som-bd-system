@@ -1,3 +1,8 @@
+<?php
+session_start();
+// unset($_SESSION['username'])
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,6 +32,7 @@
     <link rel="stylesheet" href="../assests/css/registeration.css" />
     <link rel="stylesheet" href="../assests/css/login.css" />
     <link rel="stylesheet" href="../assests/css/roles.css" />
+    <link rel="stylesheet" href="../assests/css/user_profile.css" />
     <link rel="stylesheet" href="../assests/css/footer.css" />
     <!-- Css Link -->
   </head>
@@ -35,7 +41,7 @@
   <header class="header__wrapper marginX">
       <div class="overlay has-fade"></div>
       <nav class="flex jc-sb ai-c">
-        <a class="logo" href="/">Som Blood Donation</a>
+        <a class="logo btn_load_screen">Som Blood Donation</a> 
 
         <a href="#" id="btnHumberger" class="header__toggle hide-for-desktop">
           <span></span>
@@ -44,27 +50,55 @@
         </a>
 
         <div class="header__links hide-for-mobile">
-          <a href="/views/home.php">Home</a>
-          <a href="/views/roles.php">How to donate</a>
-          <a href="#">About us</a>
-          <a href="#">Donate</a>
+          <a class="btn_load_screen home">Home</a>
+          <a class="btn_load_screen roles">How to donate</a>
+          <a class="btn_load_screen about">About us</a>
+          <a class="btn_load_screen appointment">Appointments</a>
         </div>
 
+        <!-- Showing profile button if user exits and hidding if -->
+        <?php if( isset($_SESSION['username']) && !empty($_SESSION['username']) ){
+          ?> 
         <div class="log__reg hide-for-mobile">
-          <a href="./signin.php">Sign In</a>
-          <a href="./registration.php">Sign Up</a>
+        <a class="profile_name__icon" id="head__profile_name" href="./user_profile.php"> <span class="icon"><i class="fa-solid fa-user"></i></span> <?php echo $_SESSION['username'] ?></a>
         </div>
+
+        <?php }else{ ?>
+        <div class="log__reg hide-for-mobile">
+          <a class="btn_load_screen login">Sign In</a>
+          <a class="btn_load_screen registration">Sign Up</a>
+        </div>
+        <?php } ?>
+
       </nav>
 
       <div class="header__menu flex fd-c has-fade">
-        <a href="/views/home.php">Home</a>
-        <a href="/views/roles.php">How to donate</a>
-        <a href="#">About us</a>
-        <a href="#">Donate</a>
+        <a class="btn_load_screen home">Home</a>
+        <a class="btn_load_screen roles">How to donate</a>
+        <a class="btn_load_screen about">About us</a>
+        <a class="btn_load_screen appointment">Appointments</a>
 
-        <div class="menu__reg__lg flex fd-c">
-          <a href="./signin.php">Sign In</a>
-          <a href="./registration.php">Sign Up</a>
+        <!-- Showing profile button if user exits and hidding if -->
+        <?php if( isset($_SESSION['username']) && !empty($_SESSION['username']) ){
+        ?> 
+        <div class="log__reg">
+        <a class="profile_name__icon" id="head__profile_name" href="./user_profile.php"> <p class="icon"><i class="fa-solid fa-user"></i></p> <?php echo $_SESSION['username'] ?></a>
         </div>
+
+        <?php }else{ ?>
+          <div class="menu__reg__lg flex fd-c">
+          <a class="btn_load_screen login">Sign In</a>
+          <a class="btn_load_screen registration">Sign Up</a>
+        </div>
+        <?php } ?>
+
+        
+
+        <!-- <div class="menu__reg__lg flex fd-c">
+          <a class="btn_load_screen login">Sign In</a>
+          <a class="btn_load_screen registration">Sign Up</a>
+        </div> -->
+
+
       </div>
     </header>
