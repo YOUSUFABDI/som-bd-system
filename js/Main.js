@@ -26,6 +26,14 @@ function routePage(element) {
   if (element.matches(".profile")) {
     element.addEventListener("click", goToProfilePage);
   }
+
+  if (element.matches(".donors")) {
+    element.addEventListener("click", goToDonorsPage);
+  }
+
+  if (element.matches(".recipients")) {
+    element.addEventListener("click", goToRecipientsPage);
+  }
 }
 
 function goToHomePage(e) {
@@ -56,7 +64,16 @@ function goToRegistrationPage(e) {
 function goToProfilePage(e) {
   e.preventDefault();
   window.location.href = "../views/user_profile.php";
-  console.log("d");
+}
+
+function goToDonorsPage(e) {
+  e.preventDefault();
+  window.location.href = "../views/donors.php";
+}
+
+function goToRecipientsPage(e) {
+  e.preventDefault();
+  window.location.href = "../views/recipients.php";
 }
 
 document.querySelectorAll(".btn_load_screen").forEach((element) => {

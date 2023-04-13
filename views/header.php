@@ -31,7 +31,7 @@ session_start();
     <link rel="stylesheet" href="../assests/css/registeration.css" />
     <link rel="stylesheet" href="../assests/css/login.css" />
     <link rel="stylesheet" href="../assests/css/roles.css" />
-    <link rel="stylesheet" href="../assests/css/appiontment.css" />
+    <link rel="stylesheet" href="../assests/css/appointment.css" />
     <link rel="stylesheet" href="../assests/css/user_profile.css" />
     <link rel="stylesheet" href="../assests/css/footer.css" />
     <!-- Css Link -->
@@ -54,6 +54,12 @@ session_start();
           <a class="btn_load_screen roles">How to donate</a>
           <a class="btn_load_screen about">About us</a>
           <a class="btn_load_screen appointment">Appointments</a>
+          <?php if(isset($_SESSION['userType']) && $_SESSION['userType'] == "Donor"){
+          ?>
+         <a class="btn_load_screen donors">Donors</a>
+         <?php } else if(isset($_SESSION['userType']) && $_SESSION['userType'] == "Recipient") { ?>
+          <a class="btn_load_screen recipients">Recipients</a>
+         <?php } ?>
         </div>
 
         
@@ -79,6 +85,12 @@ session_start();
         <a class="btn_load_screen roles">How to donate</a>
         <a class="btn_load_screen about">About us</a>
         <a class="btn_load_screen appointment">Appointments</a>
+        <?php if(isset($_SESSION['userType']) && $_SESSION['userType'] == "Donor"){
+          ?>
+         <a class="btn_load_screen donors">Donors</a>
+         <?php } else if(isset($_SESSION['userType']) && $_SESSION['userType'] == "Recipient") { ?>
+          <a class="btn_load_screen recipients">Recipients</a>
+         <?php } ?>
 
         <!-- Showing profile button if user exits and hidding if -->
         <?php if( isset($_SESSION['username']) && !empty($_SESSION['username']) ){

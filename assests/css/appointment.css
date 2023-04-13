@@ -1,0 +1,149 @@
+/* For Desk Top */
+.appiontment {
+  display: flex;
+  margin-block-end: 30px;
+}
+
+.appiontment_right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* background-color: magenta; */
+  flex: 1;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.appiontment_right h1 {
+  color: var(--dark-blue-color);
+  font-size: var(--fs20);
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+.appiontment_right p {
+  color: var(--dark-blue-color);
+  font-size: var(--fs-16);
+  font-weight: bold;
+}
+
+.mk_appointment {
+  background-color: #ec79a5;
+  color: var(--white-color);
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  width: fit-content;
+  align-self: center;
+  padding: 9px 30px;
+  text-transform: capitalize;
+  font-size: var(--fs-16);
+  letter-spacing: 3px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 300ms ease-in-out;
+}
+
+.prevent_click {
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+.check_usr {
+  background-color: #ec79a5;
+  color: var(--white-color);
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  width: fit-content;
+  align-self: center;
+  padding: 9px 30px;
+  text-transform: capitalize;
+  font-size: var(--fs-16);
+  letter-spacing: 3px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 300ms ease-in-out;
+}
+
+.mk_appointment:hover,
+.check_usr:hover {
+  opacity: 0.75;
+}
+
+.appiontment_left {
+  flex: 1;
+}
+
+.appiontment_left img {
+  object-fit: contain;
+}
+
+/* For Mobile */
+@media (max-width: 39.9375em) {
+  .appiontment_right {
+    flex: 1;
+    gap: 10px;
+    padding-bottom: 15px;
+    /* height: 100vh; */
+  }
+
+  .appiontment_right h1 {
+    color: var(--dark-blue-color);
+    font-size: var(--fs-16);
+    font-weight: bold;
+    letter-spacing: 5px;
+  }
+
+  .appiontment_right p {
+    color: var(--dark-blue-color);
+    font-size: var(--fs-14);
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .mk_appointment {
+    font-size: var(--fs-14);
+    letter-spacing: 2px;
+    font-weight: 400;
+    width: 100%;
+  }
+
+  .appiontment_left {
+    flex: 0;
+  }
+
+  .appiontment_left img {
+    display: none;
+  }
+
+  .update_appointment {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* For Tablet */
+@media (max-width: 63.9375em) {
+  .appiontment_right {
+    gap: 10px;
+  }
+
+  .appiontment_right h1 {
+    color: var(--dark-blue-color);
+    font-size: var(--fs-14);
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  .appiontment_right p {
+    color: var(--dark-blue-color);
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  .mk_appointment {
+    font-size: var(--fs-16);
+    letter-spacing: 3px;
+  }
+}

@@ -77,6 +77,7 @@ function login() {
           $("#password").val("");
 
           window.location.href = "../views/home.php";
+          // localStorage.clear();
         }, 3000);
       } else {
         swal(response, {

@@ -132,4 +132,3 @@ include 'header.php';
 include 'footer.php';
 ?>
 <script src="../js/Carousel.js"></script>
-<script src="../js/UpdateProfile.js"></script>

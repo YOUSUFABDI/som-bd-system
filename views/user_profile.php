@@ -1,12 +1,9 @@
 <?php
-
 include 'header.php';
-
-
 ?>
 
-<section class="page-content page-container" id="page-content">
-  <div class="padding">
+<section class="page-content page-container marginX" id="page-content">
+  <div class="">
     <div class="row container d-flex justify-content-center">
       <div class="col-xl-6 col-md-12">
         <div class="card user-card-full">
@@ -87,4 +84,3 @@ include 'header.php';
 include 'footer.php';
 
 ?>
-<script src="../js/UpdateProfile.js"></script>
