@@ -41,7 +41,7 @@ session_start();
   <header class="header__wrapper marginX">
       <div class="overlay has-fade"></div>
       <nav class="flex jc-sb ai-c">
-        <a class="logo btn_load_screen">Somali Blood Donation</a> 
+        <a class="logo btn_load_screen">Soma Blood Donation</a> 
 
         <a id="btnHumberger" class="header__toggle hide-for-desktop">
           <span></span>
