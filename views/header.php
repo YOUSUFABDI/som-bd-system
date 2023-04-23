@@ -41,7 +41,7 @@ session_start();
   <header class="header__wrapper marginX">
       <div class="overlay has-fade"></div>
       <nav class="flex jc-sb ai-c">
-        <a class="logo btn_load_screen">Soma Blood Donation</a> 
+        <a class="logo btn_load_screen">Som Blood Donation</a> 
 
         <a id="btnHumberger" class="header__toggle hide-for-desktop">
           <span></span>
@@ -52,7 +52,6 @@ session_start();
         <div class="header__links hide-for-mobile">
           <a class="btn_load_screen home">Home</a>
           <a class="btn_load_screen roles">How to donate</a>
-          <a class="btn_load_screen about">About us</a>
           <a class="btn_load_screen appointment">Appointments</a>
           <?php if(isset($_SESSION['userType']) && $_SESSION['userType'] == "Donor"){
           ?>
@@ -83,7 +82,6 @@ session_start();
       <div class="header__menu flex fd-c has-fade">
         <a class="btn_load_screen home">Home</a>
         <a class="btn_load_screen roles">How to donate</a>
-        <a class="btn_load_screen about">About us</a>
         <a class="btn_load_screen appointment">Appointments</a>
         <?php if(isset($_SESSION['userType']) && $_SESSION['userType'] == "Donor"){
           ?>

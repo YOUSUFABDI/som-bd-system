@@ -15,8 +15,15 @@ include 'header.php';
 
         <div class="signin__form__item">
           <span>Password</span>
-          <input type="text" class="signin-password" id="password"/>
+          <input type="password" class="signin-password" id="password"/>
+
+          <div class="toggle_pass">
           <p class="err-password" style="color: red"></p>
+          <div class="toggle_btn">
+          <input type="checkbox" id="pass_togle_input_btn"> 
+          <span class="show_hide_txt">Show Password</span>
+         </div>
+          </div>
         </div>
 
         <button class="signin__btn">Sign In</button>

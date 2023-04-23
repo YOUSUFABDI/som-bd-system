@@ -33,7 +33,7 @@
 .signin__form__item {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 20px;
 }
 
 .signin__form__item span {
@@ -106,6 +106,22 @@
 
 .signin__foot a:nth-child(2):hover {
   opacity: 0.5;
+}
+
+.toggle_pass {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle_btn {
+  display: flex;
+  align-items: center;
+}
+
+#pass_togle_input_btn {
+  accent-color: #e01f90;
+  cursor: pointer;
 }
 
 /* TABLET SIGNIN */

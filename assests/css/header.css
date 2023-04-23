@@ -233,6 +233,18 @@ nav {
   z-index: 99;
 }
 
+@media (min-width: 64em) {
+  .header__menu,
+  .overlay {
+    display: none;
+  }
+
+  .open span:last-child,
+  .open span:first-child {
+    transform: rotate(0deg);
+  }
+}
+
 .header__menu a {
   color: var(--dark-blue-color);
   padding: 0.625rem;
@@ -279,10 +291,12 @@ nav {
   align-items: center;
   justify-content: center;
   background-color: var(--white-color);
+  align-self: center;
   padding: 4px 6px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.25);
   color: var(--light-dark-color);
+  margin-bottom: 0 !important;
 }
 
 .icon i {

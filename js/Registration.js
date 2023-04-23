@@ -155,5 +155,36 @@ function registerUser() {
   });
 }
 
+function showHidePassWord(event) {
+  passToTextToggle(event);
+}
+
+function passToTextToggle(event) {
+  const passwordInput = document.querySelectorAll(".password");
+  const showHideText = document.querySelectorAll(".show_hide_txt");
+
+  if (event.target.classList.contains("pass")) {
+    if (passwordInput[0].type === "password") {
+      passwordInput[0].type = "text";
+      showHideText[0].innerText = "Hide Password";
+    } else {
+      passwordInput[0].type = "password";
+      showHideText[0].innerText = "Show Password";
+    }
+  } else {
+    if (passwordInput[1].type === "password") {
+      passwordInput[1].type = "text";
+      showHideText[1].innerText = "Hide Password";
+    } else {
+      passwordInput[1].type = "password";
+      showHideText[1].innerText = "Show Password";
+    }
+  }
+}
+
 // adding submit form on the form
 $(".registeration__form").on("submit", handleRegForm);
+const checkBxTgle = document.querySelectorAll(".reg_togle_input_btn");
+checkBxTgle.forEach((btn) => {
+  btn.addEventListener("click", showHidePassWord);
+});

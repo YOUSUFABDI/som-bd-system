@@ -69,14 +69,29 @@ include 'header.php';
 
           <div class="registeration__item">
             <span>Password</span>
-            <input type="text" class="password" name="password" id="password"/>
-            <p class="errpass" style="color: red"></p>
+            <input type="password" class="password" name="password" id="password"/>
+
+            <div class="reg_pass">
+              <p class="errpass" style="color: red"></p>
+              <div class="toggle_btn">
+                <input type="checkbox" class="reg_togle_input_btn pass">
+                <span class="show_hide_txt">Show Password</span>
+              </div>
+            </div>
           </div>
 
           <div class="registeration__item">
             <span>Confirm Password</span>
-            <input type="text" class="confirmpass" name="confirmpass" id="confirmpass"/>
-            <p class="errcp" style="color: red"></p>
+            <input type="password" class="confirmpass password" name="confirmpass" id="confirmpass"/>
+
+            <div class="reg_pass">
+              <p class="errcp" style="color: red"></p>
+              <div class="toggle_btn">
+                <input type="checkbox" class="reg_togle_input_btn confirm_pass">
+                <span class="show_hide_txt">Show Password</span>
+              </div>
+            </div>
+
           </div>
         </div>
 

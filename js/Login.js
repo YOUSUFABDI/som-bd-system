@@ -94,5 +94,21 @@ function login() {
   });
 }
 
+function showHidePassWord() {
+  const passwordInput = document.getElementById("password");
+  const showHideText = document.querySelector(".show_hide_txt");
+
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    showHideText.innerText = "Hide Password";
+  } else {
+    passwordInput.type = "password";
+    showHideText.innerText = "Show Password";
+  }
+}
+
 // adding submit form on the form
 $(".signin__form").on("submit", handleLoginForm);
+document
+  .querySelector("#pass_togle_input_btn")
+  .addEventListener("click", showHidePassWord);

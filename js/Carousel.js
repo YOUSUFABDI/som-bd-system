@@ -27,6 +27,9 @@ let leftButton = document.querySelector(".left__btn");
 let rightButton = document.querySelector(".right__btn");
 let prevBtn = null;
 let i = 0;
+let time = 5000;
+
+window.onload = slideImages;
 
 document.slide.src = images[0];
 document.querySelector(".cr__title").innerText = titles[0];
@@ -38,6 +41,18 @@ function setImages() {
   document.slide.src = images[i];
   document.querySelector(".cr__title").innerText = titles[i];
   document.querySelector(".cr__content").innerText = contents[i];
+}
+
+// auto slide
+function slideImages() {
+  if (i < images.length - 1) {
+    i++;
+  } else {
+    i = 0;
+  }
+  changeImgDot();
+  setImages();
+  setTimeout("slideImages()", time);
 }
 
 //handle next button
