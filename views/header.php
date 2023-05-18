@@ -15,6 +15,14 @@ session_start();
       rel="stylesheet"
     />
 
+    <!-- Favicon icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assests/images/blood-icon.png"
+    />
+
     <!-- Font awesome cdn -->
     <link
       rel="stylesheet"

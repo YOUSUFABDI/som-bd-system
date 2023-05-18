@@ -34,6 +34,7 @@ include 'header.php';
           <div class="modal-header">
             <h5 class="modal-title">Appointment Form</h5>
             <button
+              id="closeModal"
               type="button"
               class="close"
               data-dismiss="modal"
@@ -71,7 +72,9 @@ include 'header.php';
                     id="name"
                     value=" <?php echo $_SESSION['fullName']?> "
                     class="form-control mt-2"
+                    style="pointer-events: none;"
                     />
+                    <p class="err_name" style="color: red"></p>
                     <?php } else { ?>
                     <input
                     type="text"
@@ -80,6 +83,7 @@ include 'header.php';
                     value=""
                     class="form-control mt-2"
                     />
+                    <p class="err_name" style="color: red"></p>
                     <?php } ?>
 
                   </div>
@@ -91,7 +95,7 @@ include 'header.php';
                   <div class="form-group">
                     <label for="">Appiontment Day</label>
                     <select name="appiontment_day" id="appiontment_day" class="form-control mt-2">
-                      <option value="Staurday">Staurday</option>
+                      <option value="Sturday">Sturday</option>
                       <option value="Sunday">Sunday</option>
                       <option value="Monday">Monday</option>
                       <option value="Tuesday">Tuesday</option>
@@ -99,6 +103,7 @@ include 'header.php';
                       <option value="Thursday">Thursday</option>
                       <option value="Friday">Friday</option>
                     </select>
+                    <p class="err_day" style="color: red"></p>
                   </div>
                 </div>
                 <!-- appiontment day -->
@@ -111,6 +116,7 @@ include 'header.php';
                       <option value="Banadir Hospital">Banadir Hospital</option>
                       <option value="Shaafi Hospital">Shaafi Hospital</option>
                     </select>
+                    <p class="err_hospital" style="color: red"></p>
                   </div>
                 </div>
                 <!-- hospital -->
@@ -125,6 +131,7 @@ include 'header.php';
                       name="description"
                       id="description"
                     />
+                    <p class="err_desc" style="color: red"></p>
                   </div>
                 </div>
                 <!-- description -->
@@ -135,6 +142,7 @@ include 'header.php';
                   Save changes
                 </button>
                 <button
+                  id="closeModalbtn"
                   type="button"
                   class="btn btn-secondary"
                   data-dismiss="modal"

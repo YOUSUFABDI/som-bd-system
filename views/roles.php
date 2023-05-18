@@ -69,80 +69,103 @@ include 'header.php';
 
     <section class="blood__type__section marginX">
       <h2>Facts About Different Blood Types</h2>
-      <div class="blood__type__wrapper">
-        <div class="blood__type__card">
-          <div class="blood__type__desc">
-            <span>A+ Facts</span>
-            <div class="blood__type__content">
-              <span
-                >.30% of the population have A+ blood the second-most common
-                type, so your donations are always in demand.</span
-              >
+     <!-- ............ parent div containing 4 cards -->
+     <div class="parent_card">
 
-              <span>.You can give blood to patients with types A+ and AB+</span>
-
-              <span>.You can receive blood from A+, A-, O+ and O- donors</span>
-            </div>
+      <!-- ...... single card -->
+      <div class="singleCard">
+        <!-- ..... image card-->
+        <div class="imgCard">
+          <div class = "blood_type_title">
+          <h5>A+ facts</h5>
           </div>
-        </div>
-
-        <div class="blood__type__card">
-          <div class="blood__type__desc">
-            <span>B- Facts</span>
-            <div class="blood__type__content">
-              <span
-                >.2% of the population have B- blood - a rare type, so your
-                donations are always needed</span
-              >
-
-              <span
-                >.You can give blood to patients with types B-, B+, AB- and
-                AB+</span
-              >
-
-              <span>.You can only receive blood from B- and O- donors</span>
-            </div>
+          <!-- ... card content -->
+          <div class="content">
+            
+              <ul>
+                <li> 30% of the population have A+ blood the second-most common
+                type, so your donations are always in demand.</li>
+                <li>You can give blood to patients with types A+ and AB+</li>
+                <li>You can receive blood from A+, A-, O+ and O- donors</li>
+              </ul>
           </div>
-        </div>
 
-        <div class="blood__type__card">
-          <div class="blood__type__desc">
-            <span>B- Facts</span>
-            <div class="blood__type__content">
-              <span
-                >.1% of the population have AB- blood - the least common
-                type</span
-              >
-
-              <span
-                >.You can give blood to patients with types AB- and AB+</span
-              >
-
-              <span>.You can receive blood from AB-, A-, B- and O- donors</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="blood__type__card">
-          <div class="blood__type__desc">
-            <span>O+ Facts</span>
-            <div class="blood__type__content">
-              <span
-                >.39% of the population have O+ blood - the most common
-                type</span
-              >
-
-              <span
-                >.You can give blood to patients with any positive type</span
-              >
-
-              <span>.You can only receive blood from O+ and O- donors</span>
-            </div>
-          </div>
         </div>
       </div>
+      <!-- ....end single card -->
+
+
+         <!-- ...... two card start -->
+         <div class="singleCard">
+        <!-- ..... image card-->
+        <div class="imgCard">
+          <div class = "blood_type_title">
+          <h5>B- Facts</h5>
+          </div>
+          <!-- ... card content -->
+          <div class="content">
+            
+              <ul>
+                <li>.2% of the population have B- blood - a rare type, so your
+                donations are always needed</li>
+                <li>You can give blood to patients with types AB- and AB+</li>
+                <li>You can only receive blood from B- and O- donors</li>
+              </ul>
+          </div>
+
+        </div>
+      </div>
+      <!-- ....end two card -->
+
+         <!-- ...... three card start -->
+         <div class="singleCard">
+        <!-- ..... image card-->
+        <div class="imgCard">
+          <div class = "blood_type_title">
+          <h5>AB- Facts</h5>
+          </div>
+          <!-- ... card content -->
+          <div class="content">
+            
+              <ul>
+                <li>1% of the population have AB- blood - the least common</li>
+                <li>You can give blood to patients with types AB- and AB+</li>
+                <li>You can receive blood from AB-, A-, B- and O- donors</li>
+              </ul>
+          </div>
+
+        </div>
+      </div>
+      <!-- ....end three card -->
+
+       <!-- ...... four card start -->
+       <div class="singleCard">
+        <!-- ..... image card-->
+        <div class="imgCard">
+          <div class = "blood_type_title">
+          <h5>O+ Facts</h5>
+          </div>
+          <!-- ... card content -->
+          <div class="content">
+            
+              <ul>
+                <li>39% of the population have O+ blood - the most common
+                type</li>
+                <li>You can give blood to patients with any positive type</li>
+                <li>You can only receive blood from O+ and O- donors</li>
+              </ul>
+          </div>
+
+        </div>
+      </div>
+      <!-- ....end three card -->
+
+
+     </div>
+
     </section>
 
 <?php
 include 'footer.php';
 ?>
+

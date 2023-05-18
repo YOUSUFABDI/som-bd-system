@@ -114,91 +114,81 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  background-color: transparent;
-  margin-block-start: 35px;
+  margin-block-start: 30px;
   margin-block-end: 30px;
 }
-
-.blood__type__section h2 {
-  color: var(--black-color);
-  font-size: var(--fs-14);
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-align: center;
-}
-
-.blood__type__wrapper {
+.parent_card {
+  /* margin: 10px 0px 40px 0px; */
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 31px;
+  gap: 5px;
+  width: 100%;
 }
 
-.blood__type__card {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 60px;
+.singleCard {
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.imgCard {
   background: linear-gradient(
       0deg,
       rgba(225, 31, 143, 0.4),
       rgba(225, 31, 143, 0.4)
     ),
-    url(../images/Water\ drop-bro\ 1.png) rgba(55, 71, 79, 0.3);
+    url(../images/Water\ drop-bro-sm2.png) rgba(55, 71, 79, 0.3);
   background-repeat: no-repeat;
   background-position: top center;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
+  height: 100%;
+  position: relative;
 }
 
-.blood__type__desc {
+.content {
+  padding: 277px 8px 20px 4px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-block-start: 347px;
 }
 
-.blood__type__desc span {
-  color: var(--black-color);
-  font-size: var(--fs20);
+.blood_type_title {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translateX(-50%);
   font-weight: bold;
-  letter-spacing: 4px;
-  text-align: center;
+  font-size: var(--fs20);
+  text-transform: capitalize;
 }
 
-.blood__type__content {
+ul {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 0 10px;
 }
 
-.blood__type__content span {
-  font-size: var(--fs-14);
-  font-weight: 400;
-  letter-spacing: 2px;
-  line-height: 1.4;
-  text-align: left;
+ul li {
+  list-style: circle;
+  padding-top: 8px;
 }
 
 /* TABLET BLOOD TYPE */
 @media (min-width: 37.5em) {
-  .blood__type__section h2 {
-    font-size: var(--fs20);
-    letter-spacing: 4px;
+  .parent_card {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .blood__type__wrapper {
-    grid-template-columns: repeat(2, 1fr);
+  .singleCard {
+    width: 338px;
   }
 }
 
 /* DESKTOP BLOOD TYPE */
 @media (min-width: 62.5em) {
-  .blood__type__wrapper {
-    grid-template-columns: repeat(3, 1fr);
+  .parent_card {
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  .blood__type__card {
-    width: fit-content;
+  .singleCard {
+    width: 300px;
   }
 }
 /* BLOOD TYPE SECTION ENDS HERE */

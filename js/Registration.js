@@ -21,7 +21,6 @@ function validationForm(errorMessages) {
   const errE = document.querySelector(".erre");
   const errU = document.querySelector(".erru");
   const errPass = document.querySelector(".errpass");
-  const errCp = document.querySelector(".errcp");
 
   //validation input elements
   const fullNameInput = document.querySelector(".full_name");
@@ -29,7 +28,6 @@ function validationForm(errorMessages) {
   const emailInput = document.querySelector(".email");
   const userNameInput = document.querySelector(".username");
   const passwordInput = document.querySelector(".password");
-  const confirmPassword = document.querySelector(".confirmpass");
 
   // regular exprestions that checks inputs values
   const validName = new RegExp(
@@ -73,17 +71,6 @@ function validationForm(errorMessages) {
   } else {
     errPass.innerText = "";
   }
-
-  if (!validPassword.test(confirmPassword.value)) {
-    errorMessages.push("enter confirmPassword first");
-    errCp.innerText = "enter confirmPassword first";
-  } else {
-    errCp.innerText = "";
-  }
-
-  if (confirmPassword.value !== passwordInput.value) {
-    errorMessages.push("Passwords must match");
-  }
 }
 
 // registering student function
@@ -97,7 +84,6 @@ function registerUser() {
   let gmail = $("#email").val();
   let username = $("#username").val();
   let password = $("#password").val();
-  let confirmpass = $("#confirmpass").val();
 
   let sendingData = {
     fullName: fullName,
@@ -106,7 +92,6 @@ function registerUser() {
     gmail: gmail,
     userName: username,
     password: password,
-    confirmPass: confirmpass,
     address: address,
     gender: gender,
     phone: phonenumber,
@@ -124,6 +109,7 @@ function registerUser() {
 
       // check if user is registered or not
       if (status) {
+        console.log(response);
         swal(response, "Login Please", {
           buttons: false,
           timer: 3000,
@@ -140,7 +126,6 @@ function registerUser() {
         $("#email").val("");
         $("#username").val("");
         $("#password").val("");
-        $("#confirmpass").val("");
       } else {
         swal(response, {
           buttons: false,
@@ -160,31 +145,19 @@ function showHidePassWord(event) {
 }
 
 function passToTextToggle(event) {
-  const passwordInput = document.querySelectorAll(".password");
-  const showHideText = document.querySelectorAll(".show_hide_txt");
+  const passwordInput = document.querySelector(".password");
+  const showHideText = document.querySelector(".show_hide_txt");
 
-  if (event.target.classList.contains("pass")) {
-    if (passwordInput[0].type === "password") {
-      passwordInput[0].type = "text";
-      showHideText[0].innerText = "Hide Password";
-    } else {
-      passwordInput[0].type = "password";
-      showHideText[0].innerText = "Show Password";
-    }
-  } else {
-    if (passwordInput[1].type === "password") {
-      passwordInput[1].type = "text";
-      showHideText[1].innerText = "Hide Password";
-    } else {
-      passwordInput[1].type = "password";
-      showHideText[1].innerText = "Show Password";
-    }
-  }
+  passwordInput.type === "password"
+    ? (passwordInput.type = "text")
+    : (passwordInput.type = "password");
+
+  passwordInput.type === "password"
+    ? (showHideText.innerText = "Show password")
+    : (showHideText.innerText = "Hide password");
 }
 
 // adding submit form on the form
 $(".registeration__form").on("submit", handleRegForm);
-const checkBxTgle = document.querySelectorAll(".reg_togle_input_btn");
-checkBxTgle.forEach((btn) => {
-  btn.addEventListener("click", showHidePassWord);
-});
+const checkBxTgle = document.querySelector(".reg_togle_input_btn");
+checkBxTgle.addEventListener("click", showHidePassWord);

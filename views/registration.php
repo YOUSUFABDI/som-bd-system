@@ -80,19 +80,6 @@ include 'header.php';
             </div>
           </div>
 
-          <div class="registeration__item">
-            <span>Confirm Password</span>
-            <input type="password" class="confirmpass password" name="confirmpass" id="confirmpass"/>
-
-            <div class="reg_pass">
-              <p class="errcp" style="color: red"></p>
-              <div class="toggle_btn">
-                <input type="checkbox" class="reg_togle_input_btn confirm_pass">
-                <span class="show_hide_txt">Show Password</span>
-              </div>
-            </div>
-
-          </div>
         </div>
 
         <button type="submit" class="reg__btn">Sign Up</button>

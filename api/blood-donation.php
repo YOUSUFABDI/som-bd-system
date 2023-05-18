@@ -11,14 +11,36 @@ function registerUser($conn){
 
     $data = array();
 
-    $query = "CALL register_user_sp('', '$fullName', '$userType', '$bloodType', '$gmail', '$userName', '$password', '$confirmPass', '$address', '$gender', '$phone')";
+    $array_data = array();
 
-    $result = $conn->query($query);
+    // username
+    $get_username = "SELECT * FROM users WHERE username = '$userName' ";
+    $res_username = $conn->query($get_username);
 
-    if($result){
-        $data = array("status" => true, "data" => "Registered SuccessFully ✅");
+    // gmail
+    $get_gmail = "SELECT * FROM users WHERE gmail = '$gmail'";
+    $res_gmail = $conn->query($get_gmail);
+
+    // fullname
+    $get_fullname = "SELECT * FROM users WHERE fullName = '$fullName' ";
+    $res_fullname = $conn->query($get_fullname);
+
+    if(mysqli_num_rows($res_fullname) > 0){
+        $data = array("status" => false, "data" => "Sorry that name was already taken 😔😔");
+    }else if(mysqli_num_rows($res_gmail) > 0) {
+        $data = array("status" => false, "data" => "Sorry that gmail was already taken 😔😔");
+    }else if(mysqli_num_rows($res_username) > 0){
+        $data = array("status" => false, "data" => "Sorry that username was already taken 😔😔");
     }else{
-        $data = array("status" => false, "data" => $conn->error);
+        $query = "CALL register_user_sp('', '$fullName', '$userType', '$bloodType', '$gmail', '$userName', '$password',  '$address', '$gender', '$phone')";
+
+        $result = $conn->query($query);
+    
+        if($result){
+            $data = array("status" => true, "data" => "Registered SuccessFully ✅");
+        }else{
+            $data = array("status" => false, "data" => $conn->error);
+        }
     }
 
     echo json_encode($data);
