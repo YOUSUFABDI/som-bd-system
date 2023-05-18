@@ -33,32 +33,48 @@ include 'header.php';
                   </div>
                 </div>
                 <div class="row">
+                  <!-- Full Name -->
                   <div class="col-sm-6">
                    <p class="m-b-10 f-w-600">Full Name</p>
                     <input type="text" class="text-muted f-w-400 prof_input" id="profile_fullname_input" name="profile_fullname_input"  value=" <?php echo $_SESSION['fullName'] ?> ">
+                    <p class="err_name" style="color: red"></p>
                   </div>
+                  <!-- Full Name -->
+
+                  <!-- Blood Type -->
                   <div class="col-sm-6 m-t-10">
-                    <p class="m-b-10 f-w-600">Phone</p>
-                    <input type="text" class="text-muted f-w-400 prof_input" id="profile_phone_input" name="profile_phone_input" value=" <?php echo $_SESSION['phone'] ?> ">
+                    <p class="m-b-10 f-w-600">Blood Type</p>
+                    <input type="text" class="text-muted f-w-400 prof_input" id="profile_blood_input" name="profile_blood_input" value=" <?php echo $_SESSION['bloodType'] ?> ">
+                    <p class="err_bd" style="color: red"></p>
                   </div>
+                  <!-- Blood Type -->
                 </div>
 
+                <!-- Gender -->
                 <div class="row">
                   <div class="col-sm-6 m-t-10">
-                   <p class="m-b-10 f-w-600">Email</p>
-                    <input type="text" class="text-muted f-w-400 prof_input" id="profile_email_input" name="profile_email_input" value=" <?php echo $_SESSION['gmail'] ?> ">
+                   <p class="m-b-10 f-w-600">Gender</p>
+                    <input type="text" class="text-muted f-w-400 prof_input" id="profile_gender_input" name="profile_gender_input" value=" <?php echo $_SESSION['gender'] ?> ">
+                    <p class="err_gender" style="color: red"></p>
                   </div>
+                  <!-- Gender -->
 
+                <!-- user type -->
                 <div class="row">
                   <div class="col-sm-6 m-t-10">
-                   <p class="m-b-10 f-w-600">Username</p>
-                    <input type="text" class="text-muted f-w-400 prof_input" id="profile_username_input" name="profile_username_input" value=" <?php echo $_SESSION['username'] ?> " >
+                   <p class="m-b-10 f-w-600">User Type</p>
+                    <input type="text" class="text-muted f-w-400 prof_input" id="profile_usertype_input" name="profile_usertype_input" value=" <?php echo $_SESSION['userType'] ?> " >
+                    <p class="err_usertype" style="color: red"></p>
                   </div>
+                  <!-- user type -->
 
+                  <!-- address -->
                   <div class="col-sm-6  m-t-10">
                     <p class="m-b-10 f-w-600">Address</p>
                     <input type="text" class="text-muted f-w-400 prof_input" id="profile_address_input" name="profile_address_input" value=" <?php echo $_SESSION['address'] ?> ">
+                    <p class="err_address" style="color: red"></p>
                   </div>
+                  <!-- address -->
 
                 </div>
 

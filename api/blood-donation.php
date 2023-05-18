@@ -82,7 +82,7 @@ function update_user($conn){
 
     $data = array();
 
-    $query = " UPDATE users set fullName = '$name', phone = '$phone', gmail = '$gmail', username = '$username', address = '$address' WHERE id = '$id'";
+    $query = " UPDATE users set fullName = '$name', gender = '$gender', bloodType = '$bloodType', userType = '$userType', address = '$address' WHERE id = '$id'";
 
     $result = $conn->query($query);
 
