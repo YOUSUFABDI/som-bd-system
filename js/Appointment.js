@@ -28,12 +28,14 @@ function makeAppointment() {
   let appintmentDay = $("#appiontment_day").val();
   let hospital = $("#hospital").val();
   let description = $("#description").val();
+  let phone = $("#phone").val();
 
   let sendingData = {
     name: name,
     appintmentDay: appintmentDay,
     hospital: hospital,
     description: description,
+    phone: phone,
     action: "makeAppointment",
   };
 

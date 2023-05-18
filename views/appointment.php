@@ -90,12 +90,42 @@ include 'header.php';
                 </div>
                 <!-- name -->
 
+                <!-- phone -->
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="">Phone</label>
+                    <?php if(isset($_SESSION['username']) && !empty($_SESSION['username'])){
+                    ?>
+                    <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    value=" <?php echo $_SESSION['phone']?> "
+                    class="form-control mt-2"
+                    style="pointer-events: none;"
+                    />
+                    <p class="err_phone" style="color: red"></p>
+                    <?php } else { ?>
+                    <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    value=""
+                    class="form-control mt-2"
+                    />
+                    <p class="err_phone" style="color: red"></p>
+                    <?php } ?>
+
+                  </div>
+                </div>
+                <!-- phone -->
+
                 <!-- appiontment day -->
                 <div class="col-sm-12 mt-4">
                   <div class="form-group">
                     <label for="">Appiontment Day</label>
                     <select name="appiontment_day" id="appiontment_day" class="form-control mt-2">
-                      <option value="Sturday">Sturday</option>
+                      <option value="Sturday">Saturday</option>
                       <option value="Sunday">Sunday</option>
                       <option value="Monday">Monday</option>
                       <option value="Tuesday">Tuesday</option>

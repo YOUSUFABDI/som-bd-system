@@ -10,7 +10,7 @@ function makeAppointment($conn){
 
     $data = array();
 
-    $query = "INSERT INTO `appointment`(`name`, `appintmentDay`, `hospital`, `description`) VALUES ('$name', '$appintmentDay', '$hospital', '$description')";
+    $query = "INSERT INTO `appointment`(`name`, `appintmentDay`, `hospital`, `description`, `phone`) VALUES ('$name', '$appintmentDay', '$hospital', '$description', '$phone')";
 
     $result = $conn->query($query);
 
