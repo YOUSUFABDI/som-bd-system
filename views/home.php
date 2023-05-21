@@ -46,8 +46,9 @@ include 'header.php';
     <?php }?>
     <!-- id -->
 
-    <section class="ways__section paddingX">
+    <section class="ways__section marginX">
       <span class="ways__title">ways to give blood</span>
+
       <div class="ways__image__info">
         <div class="ways__img__wrapper">
           <img
@@ -56,6 +57,7 @@ include 'header.php';
             alt="blood-test-img"
           />
         </div>
+
         <div class="ways__info">
           <span class="ways__info__title">Donate in Somali</span>
           <p>
@@ -64,8 +66,9 @@ include 'header.php';
             who help ensure a safe, healthy blood supply. Make an appointment to
             donate blood today.
           </p>
-          <button class="ways__btn">Make Appointment</button>
+          <a href="./appointment.php" class="ways__btn">Make Appointment</a>
         </div>
+
       </div>
     </section>
 
@@ -86,7 +89,7 @@ include 'header.php';
               becoming a donor and the process of getting that first appointment
               booked.
             </p>
-            <button>Donate Today</button>
+            <a href="./appointment.php">Donate Today</a>
           </div>
         </div>
 
@@ -104,7 +107,7 @@ include 'header.php';
               blood means you are saving live and you are live saver so to
               donate now set up an appointment now.
             </p>
-            <button>Donate Today</button>
+            <a href="./appointment.php">Donate Today</a>
           </div>
         </div>
 
@@ -121,7 +124,7 @@ include 'header.php';
               Every two seconds Someone needs blood so make your appointment now
               to donate to save life.
             </p>
-            <button>Donate Today</button>
+            <a href="./appointment.php">Donate Today</a>
           </div>
         </div>
       </div>
