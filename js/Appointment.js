@@ -29,6 +29,7 @@ function makeAppointment() {
   let hospital = $("#hospital").val();
   let description = $("#description").val();
   let phone = $("#phone").val();
+  let bloodType = $("#bloodType").val();
 
   let sendingData = {
     name: name,
@@ -36,6 +37,7 @@ function makeAppointment() {
     hospital: hospital,
     description: description,
     phone: phone,
+    bloodType: bloodType,
     action: "makeAppointment",
   };
 

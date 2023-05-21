@@ -77,7 +77,7 @@ include 'header.php';
         <!-- ..... image card-->
         <div class="imgCard">
           <div class = "blood_type_title">
-          <h5>A+ facts</h5>
+          <h5>A facts</h5>
           </div>
           <!-- ... card content -->
           <div class="content">
@@ -100,7 +100,7 @@ include 'header.php';
         <!-- ..... image card-->
         <div class="imgCard">
           <div class = "blood_type_title">
-          <h5>B- Facts</h5>
+          <h5>B Facts</h5>
           </div>
           <!-- ... card content -->
           <div class="content">
@@ -122,7 +122,7 @@ include 'header.php';
         <!-- ..... image card-->
         <div class="imgCard">
           <div class = "blood_type_title">
-          <h5>AB- Facts</h5>
+          <h5>AB Facts</h5>
           </div>
           <!-- ... card content -->
           <div class="content">
@@ -143,7 +143,7 @@ include 'header.php';
         <!-- ..... image card-->
         <div class="imgCard">
           <div class = "blood_type_title">
-          <h5>O+ Facts</h5>
+          <h5>O Facts</h5>
           </div>
           <!-- ... card content -->
           <div class="content">

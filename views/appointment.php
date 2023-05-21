@@ -120,6 +120,36 @@ include 'header.php';
                 </div>
                 <!-- phone -->
 
+                <!-- bloodType -->
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="">Blood To Donate</label>
+                    <?php if(isset($_SESSION['username']) && !empty($_SESSION['username'])){
+                    ?>
+                    <input
+                    type="text"
+                    name="bloodType"
+                    id="bloodType"
+                    value=" <?php echo $_SESSION['bloodType']?> "
+                    class="form-control mt-2"
+                    style="pointer-events: none;"
+                    />
+                    <p class="err_phone" style="color: red"></p>
+                    <?php } else { ?>
+                    <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    value=""
+                    class="form-control mt-2"
+                    />
+                    <p class="err_phone" style="color: red"></p>
+                    <?php } ?>
+
+                  </div>
+                </div>
+                <!-- bloodType -->
+
                 <!-- appiontment day -->
                 <div class="col-sm-12 mt-4">
                   <div class="form-group">

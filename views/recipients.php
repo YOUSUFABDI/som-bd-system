@@ -13,7 +13,7 @@ include 'header.php';
   <div class="col-xl-12">
     <div class="card">
       <div class="card-header">
-        <h5>Donors Table</h5>
+        <h5>Recipients Table</h5>
         <span class="d-block m-t-5"
           >Here are <code>recipients</code> like you</span
         >

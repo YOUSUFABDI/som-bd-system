@@ -12,7 +12,6 @@
           <div>
             <a class="btn_load_screen home">Home</a>
             <a class="btn_load_screen roles">How to donate</a>
-            <a class="btn_load_screen about">About us</a>
             <a class="btn_load_screen appointment">Appointments</a>
           </div>
         </div>
