@@ -46,7 +46,7 @@ include 'header.php';
           <div class="modal-body">
             <form id="appointmentForm">
               <!-- hidden input for id -->
-              <input type="hidden" name="upd_id" id="upd_id"/>
+              <input type="hidden" name="upd_id" id="upd_id" value="<?php echo $_SESSION['id']?>" />
 
               <div class="row">
                 <!-- alert -->

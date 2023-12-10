@@ -10,12 +10,36 @@ function makeAppointment($conn){
 
     $data = array();
 
-    $query = "INSERT INTO `appointment`(`name`, `appintmentDay`, `hospital`, `description`, `phone`, `bloodType`) VALUES ('$name', '$appintmentDay', '$hospital', '$description', '$phone', '$bloodType')";
+    $query = "INSERT INTO `appointment`(`name`, `appintmentDay`, `hospital`, `description`, `phone`, `bloodType`, `user_id`) VALUES ('$name', '$appintmentDay', '$hospital', '$description', '$phone', '$bloodType', '$userId')"; 
 
     $result = $conn->query($query);
 
     if($result){
         $data = array("status" => true, "data" => "Thank You For Making Appointment We Are waiting For You");
+    }else{
+        $data = array("status" => false, "data" => $conn->error);
+    }
+
+    echo json_encode($data);
+}
+
+
+function getAllAppointments($conn){
+    extract($_POST);
+
+    $data = array();
+    $array_data = array();
+
+    $query = " SELECT * FROM `appointment` ";
+
+    $result = $conn->query($query);
+
+    if($result){
+        while($row = $result->fetch_assoc()){
+            $array_data [] = $row;
+        }
+
+        $data = array("status" => true, "data" => $array_data);
     }else{
         $data = array("status" => false, "data" => $conn->error);
     }

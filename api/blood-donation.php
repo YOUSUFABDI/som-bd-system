@@ -32,7 +32,7 @@ function registerUser($conn){
     }else if(mysqli_num_rows($res_username) > 0){
         $data = array("status" => false, "data" => "Sorry that username was already taken 😔😔");
     }else{
-        $query = "CALL register_user_sp('', '$fullName', '$userType', '$bloodType', '$gmail', '$userName', '$password',  '$address', '$gender', '$phone')";
+        $query = "INSERT INTO `users`(`fullName`, `userType`, `bloodType`, `gmail`, `userName`, `password`,  `address`, `gender`, `phone`) VALUES('$fullName', '$userType', '$bloodType', '$gmail', '$userName', '$password',  '$address', '$gender', '$phone')";
 
         $result = $conn->query($query);
     
@@ -50,32 +50,28 @@ function login($conn){
     extract($_POST);
 
     $data = array();
-    $array_data = array();
 
-    $query = "CALL login_sp('$username', '$password')";
+    $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password' ";
     $result = $conn->query($query);
 
     if($result){
         $row = $result->fetch_assoc();
 
-        if(isset($row['msg'])){
-            if($row['msg'] == 'Deny'){
-                $data = array("status" => false, "data" => "Username Or Password Is Incorrect 🙅‍♂️");
-            }else{
-                $data = array("status" => false, "data" => "User Locked By The Admin");
-            }
-        }else{
+        if($row){
             foreach($row as $key=>$value){
                 $_SESSION[$key] = $value;
             }
-            $data = array("status" => true, "data" => "Logged In SuccessFully 👌");
+            $data = array("status" => true, "data" => "Logged In Successfully 👌");
+        } else {
+            $data = array("status" => false, "data" => "Username Or Password Is Incorrect 🙅‍♂️");
         }
-    }else{
+    } else {
         $data = array("status" => false, "data" => $conn->error);
     }
 
     echo json_encode($data);
 }
+
 
 function update_user($conn){
     extract($_POST);
